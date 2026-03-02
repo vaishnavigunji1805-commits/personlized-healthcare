@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalized Healthcare Recommendation System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <h1>Personalized Healthcare Recommendation System</h1>
+
+    <form id="healthForm">
+        <input type="number" id="heartRate" placeholder="Heart Rate" required>
+        <input type="number" id="steps" placeholder="Steps Count" required>
+        <input type="number" id="sleepScore" placeholder="Sleep Score (0–100)" required>
+        <input type="number" id="weight" placeholder="Weight (kg)" required>
+        <input type="number" id="height" placeholder="Height (cm)" required>
+        <input type="number" id="sysBP" placeholder="Systolic BP" required>
+        <input type="number" id="diaBP" placeholder="Diastolic BP" required>
+
+        <button type="submit">Analyze Health</button>
+    </form>
+
+    <div class="box">
+        <h2>Health Status</h2>
+        <p id="output">—</p>
+    </div>
+
+    <div class="box">
+        <h2>AI Health Insight</h2>
+        <p id="aiInsight">—</p>
+    </div>
+
+    <div class="box">
+        <h2>Daily Health Metrics</h2>
+        <canvas id="healthChart"></canvas>
+    </div>
+
+    <div class="box">
+        <h2>Weekly Health History</h2>
+        <canvas id="weeklyChart"></canvas>
+    </div>
+
+    <div class="box">
+        <h2>Diet Recommendation</h2>
+        <p id="dietPlan">—</p>
+
+        <h2>Workout Recommendation</h2>
+        <p id="workoutPlan">—</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
